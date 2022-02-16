@@ -9,7 +9,7 @@
           <tr>
             <th style="text-align: center">Plant name</th>
             <th style="text-align: center">Date Watered</th>
-            <th style="text-align: center">Watered</th>
+            <th style="text-align: center">Click when 🪴 is watered</th>
             <th style="text-align: center">Action Needed</th>
             <th style="text-align: center">Additional Details</th>
           </tr>
@@ -100,18 +100,22 @@
 
             <!-- Table Row Display -->
             <tr data-bs-toggle="modal" data-bs-target="#exampleModal" style="cursor:pointer">
-              <td style="text-align: center"><%= posts[i].nickname%></td>
+              <td style="text-align: center; font-weight: bold; font-size:17px"><%= posts[i].nickname%></td>
               <td style="text-align: center"><%= posts[i].dateWatered%></td>
 
 
               <!-- Date Watered Checkbox -->
-              <td style="text-align: center">
+              <td style="display: flex; flex-direction:row; justify-content: center; align-items: center;">
                 <form
-                    class="col-1"
                     action="/post/updateDateWatered/<%= posts[i]._id %>?_method=PUT"
                     method="POST"
+                    style="text-align:center"
                 >
-                  <button class="btn btn-primary fa" type="submit"></button>
+                  <button class="btn btn-secondary" type="submit" style="background-color:#3A5A40">
+                    <span class="material-symbols-outlined">
+                      check_box
+                    </span>
+                  </button>
                 </form>
               </td>
 
