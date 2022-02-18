@@ -46,7 +46,7 @@ module.exports = {
 
       });
       console.log("Post has been added!");
-      res.redirect("/profile");
+      res.redirect("/success");
     } catch (err) {
       console.log(err);
     }
