@@ -2,9 +2,9 @@
 <div class="profile-container">
   <div class="row mt-5">
       <div class="col-6">
-          <div>
-            <h1 class="welcome-message">Welcome <%= user.userName %>!</h1>
-          </div>
+        <div>
+          <h1 class="welcome-message">Welcome <%= user.userName %>!</h1>
+        </div>
           <div class="mt-5">
             <h2>Add Plant</h2>
             <form action="/post/createPost" enctype="multipart/form-data" method="POST">
@@ -60,7 +60,7 @@
           </div>
       </div>
       <div class="col-6">
-        <ul class="row list-unstyled">
+        <!-- <ul class="row list-unstyled">
         <% for(var i=0; i<posts.length; i++) {%>
           <li class="col-6 justify-content-between mt-5">
             <a href="/post/<%= posts[i]._id%>">
@@ -68,7 +68,7 @@
             </a>
           </li>
         <% } %>
-        </ul>
+        </ul> -->
         <div class="row justify-content-center mt-5">
           <a class="btn btn-primary submit" href="/feed">Return to Dashboard</a>
         </div>  
