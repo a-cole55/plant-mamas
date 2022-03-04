@@ -9134,6 +9134,9 @@ textarea.form-control-lg {
       background-color: #213816;
       border-color: #213816; }
 
+.welcome-message {
+  margin-bottom: 0; }
+
 .dashboard-container {
   margin-top: 100px;
   min-height: 100vh;
@@ -9168,6 +9171,19 @@ textarea.form-control-lg {
 
 .dashboard-button {
   padding: 0.375rem 1.5rem; }
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .modal-body img {
+    width: 180px;
+    height: 180px; }
+  .modal-body h4, .modal-body .h4 {
+    font-size: 18px;
+    text-decoration: underline;
+    display: inline; }
 
 .btn {
   color: white; }
