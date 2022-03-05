@@ -1,27 +1,5 @@
 <%- include('partials/min-header-dashboard') -%>
   <div class="dashboard-container">
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
     <div class="container mt-5">
       <h2>Your Plant Dashboard</h2>
       <p>Here you can find your custom plant information. Enjoy!</p>            
@@ -37,6 +15,35 @@
         </thead>
         <tbody>
           <% for(var i=0; i<posts.length; i++) {%>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h3 class="modal-title fs-5" id="exampleModalLabel"><%= posts[i].nickname%></h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <h4><%= posts[i].name%></h4>
+                    <img src= "<%= posts[i].image%>" alt="plant"/>
+                    <h4>Ideal Temperature:</h4>
+                    <span><%= posts[i].temperature%></span>
+                    <h4>Ideal Light Conditions:</h4>
+                    <span><%= posts[i].lightConditions%></span>
+                    <h4>Date Purchased:</h4>
+                    <span><%= posts[i].datePurchased%></span>
+                    <h4>Date Watered:</h4>
+                    <span><%= posts[i].dateWatered%></span>
+                    <h4>Date Fertilized:</h4>
+                    <span><%= posts[i].dateFertilized%></span>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                  </div>
+                </div>
+              </div>
+            </div>
             <tr>
               <!-- <td><%= posts[i].image%></td> -->
               <td><%= posts[i].nickname%></td>
@@ -44,8 +51,8 @@
               <td><%= posts[i].dateFertilized%></td>
               <td>!</td>
               <td><!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                  More Info
+                <button type="button" class="btn btn-primary dashboard-button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  View
                 </button></td>
             </tr>
           <% } %>
@@ -79,48 +86,6 @@
           </tr>
           <tr>
             <td>Venus</td>
-            <td>12/31</td>
-            <td>12/31</td>
-            <td>!</td>
-            <td>More Info</td>
-          </tr>
-          <tr>
-            <td>Serena</td>
-            <td>12/31</td>
-            <td>12/31</td>
-            <td>!</td>
-            <td>More Info</td>
-          </tr>
-          <tr>
-            <td>Serena</td>
-            <td>12/31</td>
-            <td>12/31</td>
-            <td>!</td>
-            <td>More Info</td>
-          </tr>
-          <tr>
-            <td>Serena</td>
-            <td>12/31</td>
-            <td>12/31</td>
-            <td>!</td>
-            <td>More Info</td>
-          </tr>
-          <tr>
-            <td>Serena</td>
-            <td>12/31</td>
-            <td>12/31</td>
-            <td>!</td>
-            <td>More Info</td>
-          </tr>
-          <tr>
-            <td>Serena</td>
-            <td>12/31</td>
-            <td>12/31</td>
-            <td>!</td>
-            <td>More Info</td>
-          </tr>
-          <tr>
-            <td>Serena</td>
             <td>12/31</td>
             <td>12/31</td>
             <td>!</td>
