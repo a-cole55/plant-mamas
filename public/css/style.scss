@@ -9,6 +9,15 @@ $primary:$tertiaryColor;
 @import "feed";
 
 
+.btn {
+  color: white;
+  &:hover{
+    color:white;
+  }
+  &:focus-visible{
+    background-color: $primary;
+  }
+}
 //NavBar//
 .home{
   display:flex;

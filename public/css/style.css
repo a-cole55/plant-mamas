@@ -9166,6 +9166,16 @@ textarea.form-control-lg {
 .table-background-color {
   background-color: white; }
 
+.dashboard-button {
+  padding: 0.375rem 1.5rem; }
+
+.btn {
+  color: white; }
+  .btn:hover {
+    color: white; }
+  .btn:focus-visible {
+    background-color: #927a60; }
+
 .home {
   display: flex;
   flex-direction: column;
