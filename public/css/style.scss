@@ -1,9 +1,12 @@
 @import "variables";
+$primary:$tertiaryColor;
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
 @import "mixins";
 @import "home";
 @import "signup";
 @import "profile";
-@import "dashboard";
+@import "feed";
 
 
 //NavBar//
