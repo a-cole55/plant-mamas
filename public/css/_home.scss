@@ -18,10 +18,10 @@
 .home-logo{
     border-radius: 20em;
     width:450px;
+    transition: all 0.9s ease;
+    -webkit-transition: all 0.9s ease;
     &:hover{
         transform: rotate(30deg);
-        -webkit-transition: all 0.9s ease;
-        transition: all 0.9s ease;
     }
 }
 .actions{
