@@ -70,7 +70,8 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: right; }
+  background-position: right;
+  padding-bottom: 100px; }
   .profile-container h1 {
     font-family: "Mr De Haviland", cursive;
     font-weight: bold;
@@ -89,6 +90,8 @@
     .profile-container .submit:hover {
       background-color: #213816;
       border-color: #213816; }
+  .profile-container h1 {
+    margin-bottom: 0; }
 
 .dashboard-container {
   margin-top: 100px;
