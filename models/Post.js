@@ -18,7 +18,7 @@ const PostSchema = new mongoose.Schema({
     require: true,
   },
   datePurchased: {
-    type: Number,
+    type: String,
     required: false,
   },
   lightConditions: {
@@ -34,11 +34,11 @@ const PostSchema = new mongoose.Schema({
     required: true,
   },
   dateWatered: {
-    type: Number,
+    type: String,
     required: false,
   },
   dateFertilized: {
-    type: Number,
+    type: String,
     required: false,
   },
   user: {
