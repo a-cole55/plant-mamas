@@ -32,12 +32,18 @@ module.exports = {
       const result = await cloudinary.uploader.upload(req.file.path, {folder: "plant-mamas"});
 
       await Post.create({
-        title: req.body.title,
+        name: req.body.name,
+        nickname: req.body.nickname,
         image: result.secure_url,
         cloudinaryId: result.public_id,
-        caption: req.body.caption,
-        likes: 0,
+        datePurchased: req.body.datePurchased,
+        lightConditions: req.body.lightConditions,
+        temperature: req.body.temperature,
+        water: req.body.water,
+        dateWatered: req.body.dateWatered,
+        dateFertilized: req.body.dateFertilized,
         user: req.user.id,
+
       });
       console.log("Post has been added!");
       res.redirect("/profile");
