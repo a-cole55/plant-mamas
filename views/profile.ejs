@@ -21,12 +21,17 @@
                 <input type="file" class="form-control" id="imageUpload" name="file">
               </div>
               <div class="mb-3">
-                <label for="purchased" class="form-label">Date Purchased</label>
-                <input type="date" class="form-control" id="purchased" name="purchased">
+                <label for="datePurchased" class="form-label">Date Purchased</label>
+                <input type="date" class="form-control" id="datePurchased" name="datePurchased">
               </div>
               <div class="mb-3">
-                <label for="light" class="form-label">Light Conditions</label>
-                <input type="text" class="form-control" id="light" name="light">
+                <label for="lightConditions" class="form-label">Light Conditions</label>
+                <!-- <input type="text" class="form-control" id="lightConditions" name="lightConditions"> -->
+                <select name="lightConditions" id="lightConditions" type="text" class="form-control" required>
+                  <option value="lots">Lots of Light</option>
+                  <option value="medium">Medium Light</option>
+                  <option value="low">Low Light</option>
+                </select>
               </div>
               <div class="mb-3">
                 <label for="temperature" class="form-label">Temperature</label>
@@ -34,7 +39,13 @@
               </div>
               <div class="mb-3">
                 <label for="water" class="form-label">Watering</label>
-                <input type="text" class="form-control" id="water" name="water">
+                <!-- <input type="text" class="form-control" id="water" name="water"> -->
+                <select name="water" id="water" type="text" class="form-control" required>
+                  <option value="daily">Daily</option>
+                  <option value="weekly">Weekly</option>
+                  <option value="biweekly">Biweekly</option>
+                  <option value="monthly">Monthly</option>
+                </select>
               </div>
               <div class="mb-3">
                 <label for="dateWatered" class="form-label">Date Last Watered</label>
