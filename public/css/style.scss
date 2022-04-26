@@ -2,26 +2,11 @@
 @import "mixins";
 @import "home";
 @import "signup";
+@import "profile";
+@import "dashboard";
 
 
 //NavBar//
-.avatar{
-  width:42px;
-  height:42px;
-  border-radius: 50%;
-  margin-right: 5px;
-  border:#38A6FF 3px solid;
-}
-.avatarLink{
-  width:auto;
-}
-.avatarLink a{
-  width:auto;
-  padding:0 20px;
- }
-.avatar:hover{
-  border:white 3px solid;
-  }
 .home{
   display:flex;
   flex-direction: column;
@@ -91,4 +76,27 @@ li a:hover{
 
 nav > a{
     text-decoration: none;
+}
+#homeLogo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+#logo{
+  width:62px;
+  height:60px;                               
+  margin: 0 0 0 30px;
+  opacity: 1;
+  border-radius:50em;
+}
+.highlight{
+    background-color: $primaryColor;
+    border-color: $tertiaryColor;
+    color:white;
+    &:hover{
+        background-color: $tertiaryColor;
+        border-color: $tertiaryColor;
+    }
 }

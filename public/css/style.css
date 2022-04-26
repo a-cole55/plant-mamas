@@ -61,22 +61,63 @@
       background-color: #213816;
       border-color: #213816; }
 
-.avatar {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  margin-right: 5px;
-  border: #38A6FF 3px solid; }
+.profile-container {
+  margin-top: 100px;
+  min-height: 100vh;
+  width: 100%;
+  padding: 0 325px;
+  background-image: url("../imgs/home-img-medium.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: right; }
+  .profile-container h1 {
+    font-family: "Mr De Haviland", cursive;
+    font-weight: bold;
+    font-size: 82px;
+    margin-bottom: 35px;
+    color: #5b4630;
+    margin-left: 20px; }
+  .profile-container .form-label {
+    font-family: "Playfair Display", serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.2em; }
+  .profile-container .submit {
+    background-color: #5b4630;
+    border-color: #5b4630; }
+    .profile-container .submit:hover {
+      background-color: #213816;
+      border-color: #213816; }
 
-.avatarLink {
-  width: auto; }
-
-.avatarLink a {
-  width: auto;
-  padding: 0 20px; }
-
-.avatar:hover {
-  border: white 3px solid; }
+.dashboard-container {
+  margin-top: 100px;
+  min-height: 100vh;
+  width: 100%;
+  padding: 0 325px;
+  background-image: url("../imgs/home-img-medium.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: right; }
+  .dashboard-container h1 {
+    font-family: "Mr De Haviland", cursive;
+    font-weight: bold;
+    font-size: 82px;
+    margin-bottom: 35px;
+    color: #5b4630;
+    margin-left: 20px; }
+  .dashboard-container .form-label {
+    font-family: "Playfair Display", serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.2em; }
+  .dashboard-container .submit {
+    background-color: #5b4630;
+    border-color: #5b4630; }
+    .dashboard-container .submit:hover {
+      background-color: #213816;
+      border-color: #213816; }
 
 .home {
   display: flex;
@@ -145,3 +186,25 @@ li a:hover {
 
 nav > a {
   text-decoration: none; }
+
+#homeLogo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer; }
+
+#logo {
+  width: 62px;
+  height: 60px;
+  margin: 0 0 0 30px;
+  opacity: 1;
+  border-radius: 50em; }
+
+.highlight {
+  background-color: #213816;
+  border-color: #927a60;
+  color: white; }
+  .highlight:hover {
+    background-color: #927a60;
+    border-color: #927a60; }
