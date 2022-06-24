@@ -1,26 +1,48 @@
-<%- include('partials/header') -%>
-<div class="container">
+<%- include('partials/min-header') -%>
+<div class="profile-container">
   <div class="row mt-5">
       <div class="col-6">
           <div>
-              <p><strong>User Name</strong>: <%= user.userName %></p>
-              <p><strong>Email</strong>: <%= user.email %></p>
-              <a href="/logout" class="col-3 btn btn-primary">Logout</a>
+            <h1 class="welcome-message">Welcome <%= user.userName %>!</h1>
           </div>
           <div class="mt-5">
-            <h2>Add a post</h2>
+            <h2>Add Plant</h2>
             <form action="/post/createPost" enctype="multipart/form-data" method="POST">
               <div class="mb-3">
-                  <label for="title" class="form-label">Title</label>
-                  <input type="text" class="form-control" id="title" name="title">
+                  <label for="name" class="form-label">Official Plant Name</label>
+                  <input type="text" class="form-control" id="name" name="name">
               </div>
               <div class="mb-3">
-                <label for="caption" class="form-label">Caption</label>
-                <textarea class="form-control" id="caption" name="caption"></textarea>
+                <label for="nickname" class="form-label">Nickname</label>
+                <input class="form-control" id="nickname" name="nickname"></input>
               </div>
               <div class="mb-3">
                 <label for="imgUpload" class="form-label">Image</label>
                 <input type="file" class="form-control" id="imageUpload" name="file">
+              </div>
+              <div class="mb-3">
+                <label for="purchased" class="form-label">Date Purchased</label>
+                <input type="date" class="form-control" id="purchased" name="purchased">
+              </div>
+              <div class="mb-3">
+                <label for="light" class="form-label">Light Conditions</label>
+                <input type="text" class="form-control" id="light" name="light">
+              </div>
+              <div class="mb-3">
+                <label for="temperature" class="form-label">Temperature</label>
+                <input type="text" class="form-control" id="temperature" name="temperature">
+              </div>
+              <div class="mb-3">
+                <label for="water" class="form-label">Watering</label>
+                <input type="text" class="form-control" id="water" name="water">
+              </div>
+              <div class="mb-3">
+                <label for="dateWatered" class="form-label">Date Last Watered</label>
+                <input type="date" class="form-control" id="dateWatered" name="dateWatered">
+              </div>
+              <div class="mb-3">
+                <label for="dateFertilized" class="form-label">Date Last Fertilized</label>
+                <input type="date" class="form-control" id="dateFertilized" name="dateFertilized">
               </div>
               <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
             </form>
@@ -37,7 +59,7 @@
         <% } %>
         </ul>
         <div class="row justify-content-center mt-5">
-          <a class="btn btn-primary" href="/feed">Return to Feed</a>
+          <a class="btn btn-primary" href="/feed">Return to Dashboard</a>
         </div>  
       </div>  
     </div>
