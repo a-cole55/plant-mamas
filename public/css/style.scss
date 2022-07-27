@@ -1,10 +1,7 @@
+@import "variables";
+@import "mixins";
 @import "home";
-
-
-//Variables
-$primaryColor: #213816;
-$secondaryColor: #5b4630;
-$tertiaryColor: #927a60;
+@import "signup";
 
 
 //NavBar//
@@ -87,29 +84,11 @@ li a{
   line-height: 4em;
 }
 li a:hover{
-  background-color: $secondaryColor;
+  background-color: $tertiaryColor;
   color: #FFFFFF;
   transition: none;
 }
-#homeLogo{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
+
 nav > a{
     text-decoration: none;
-}
-#logo{
-  width:120px;
-  margin: 0 10px 0 30px;
-  opacity: 1;
-}
-.home-container{
-    div{
-        a{
-            background-color: $primaryColor;
-        }
-    }
 }
