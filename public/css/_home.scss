@@ -1,4 +1,4 @@
-// @include $tertiaryColor;
+@import "variables";
 
 .home-container{
     margin-top:60px;
@@ -28,4 +28,12 @@
     margin:35px 500px;
     display:flex;
     justify-content: space-evenly;
+    a{
+        border-color: $tertiaryColor;
+        background-color: $tertiaryColor;
+        &:hover{
+            background-color: $secondaryColor;
+            border-color: $secondaryColor;
+        }
+    }
 }
