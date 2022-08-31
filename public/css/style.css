@@ -1,8 +1,9 @@
 .home-container {
+  margin-top: 60px;
   min-height: 100vh;
-  background-image: url("../imgs/home-img-medium.jpg");
+  background-image: url("../imgs/background-plants.jpg");
   background-size: contain;
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center; }
 
@@ -10,9 +11,21 @@
   height: 800px; }
 
 .text-center {
-  margin-top: 100px; }
+  margin-top: 120px; }
 
-/*Nav Bar */
+.home-logo {
+  border-radius: 20em;
+  width: 450px; }
+  .home-logo:hover {
+    transform: rotate(30deg);
+    -webkit-transition: all 0.9s ease;
+    transition: all 0.9s ease; }
+
+.actions {
+  margin: 35px 500px;
+  display: flex;
+  justify-content: space-evenly; }
+
 .avatar {
   width: 42px;
   height: 42px;
@@ -88,13 +101,11 @@ li a {
   background-color: white;
   height: 60px;
   width: 100%;
-  line-height: 4em;
-  border-radius: 0.2em; }
+  line-height: 4em; }
 
 li a:hover {
-  background: lightseagreen;
+  background-color: #5b4630;
   color: #FFFFFF;
-  border-radius: 0.2em;
   transition: none; }
 
 #homeLogo {
@@ -113,4 +124,4 @@ nav > a {
   opacity: 1; }
 
 .home-container div a {
-  background-color: lightseagreen; }
+  background-color: #213816; }
