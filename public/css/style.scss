@@ -1,0 +1,13 @@
+@import "home";
+
+
+//Variables
+$primaryColor: lightseagreen;
+
+.home-container{
+    div{
+        a{
+            background-color: $primaryColor
+        }
+    }
+}
