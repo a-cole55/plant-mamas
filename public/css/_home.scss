@@ -1,7 +1,15 @@
 .home-container{
     min-height:100vh;
-}
-.home-BG{
     background-image: url("../imgs/home-img-medium.jpg");
-    background-color: aquamarine;
+    // background-color: aquamarine;
+    background-size: contain;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+.home-context{
+    height:800px
+}
+.text-center{
+    margin-top:100px
 }
