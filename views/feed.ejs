@@ -24,9 +24,10 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
-                    <h4><%= posts[i].name%></h4>
+                    <h4>Official Plant Name:</h4>
+                    <span><%= posts[i].name%></span>
                     <img src= "<%= posts[i].image%>" alt="plant"/>
-                    <h4>Ideal Temperature:</h4>
+                    <h4>Ideal Temperatures:</h4>
                     <span><%= posts[i].temperature%></span>
                     <h4>Ideal Light Conditions:</h4>
                     <span><%= posts[i].lightConditions%></span>
