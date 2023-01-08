@@ -60,13 +60,17 @@
                       <span>
                         <%= new Date(Date.now() + 30 * 86400000)%>
                       </span>
-                    </div>
                     <% if(posts[i].water === "Weekly") {%>
                       return(
                       <span>
                         <%= new Date(Date.now() + 30 * 86400000)%>
                       </span>)
                       <% } %>
+                    </div>
+                    
+                    <div class="plant-image hide">
+                      <img src= "<%= posts[i].image%>" alt="plant"/>
+                    </div>
                   </div>
                   <div class="modal-footer" style="background-color:#A3B18A">
                     <button type="button" class="btn btn-secondary" style="background-color:#3A5A40" data-bs-dismiss="modal" >Close</button>
