@@ -32,8 +32,8 @@
     padding:20px 60px;
 
     img{
-        width:180px;
-        height:180px;
+        width:160px;
+        height:150px;
     }
     h4{
         font-size:18px;
@@ -42,6 +42,14 @@
     span{
         margin-left:10px;
     }
+}
+
+.plant-image{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin:20px 0;
 }
 
 // .plant-info{
