@@ -9137,6 +9137,9 @@ textarea.form-control-lg {
 .welcome-message {
   margin-bottom: 0; }
 
+.fixed {
+  position: fixed; }
+
 .dashboard-container {
   margin-top: 100px;
   min-height: 100vh;
@@ -9176,13 +9179,23 @@ textarea.form-control-lg {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
+  color: white; }
+
+.plant-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center; }
+  .plant-name h3, .plant-name .h3 {
+    font-size: 30px; }
 
 .modal-body {
-  padding: 20px 75px; }
+  padding: 20px 60px; }
   .modal-body img {
-    width: 180px;
-    height: 180px; }
+    width: 160px;
+    height: 150px;
+    border-radius: 30em; }
   .modal-body h4, .modal-body .h4 {
     font-size: 18px;
     display: inline-block; }
@@ -9194,7 +9207,10 @@ textarea.form-control-lg {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px; }
+  margin: 20px 0; }
+
+.modal-footer {
+  background-color: #588157; }
 
 .btn {
   color: white; }
