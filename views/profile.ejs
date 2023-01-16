@@ -28,9 +28,9 @@
                 <label for="lightConditions" class="form-label">Light Conditions</label>
                 <!-- <input type="text" class="form-control" id="lightConditions" name="lightConditions"> -->
                 <select name="lightConditions" id="lightConditions" type="text" class="form-control" required>
-                  <option value="lots">Lots of Light</option>
-                  <option value="medium">Medium Light</option>
-                  <option value="low">Low Light</option>
+                  <option value="Lots">Lots of Light</option>
+                  <option value="Medium">Medium Light</option>
+                  <option value="Low">Low Light</option>
                 </select>
               </div>
               <div class="mb-3">
@@ -38,13 +38,13 @@
                 <input type="text" class="form-control" id="temperature" name="temperature">
               </div>
               <div class="mb-3">
-                <label for="water" class="form-label">Watering</label>
+                <label for="water" class="form-label">Watering Frequency</label>
                 <!-- <input type="text" class="form-control" id="water" name="water"> -->
                 <select name="water" id="water" type="text" class="form-control" required>
-                  <option value="daily">Daily</option>
-                  <option value="weekly">Weekly</option>
-                  <option value="biweekly">Biweekly</option>
-                  <option value="monthly">Monthly</option>
+                  <option value="Daily">Daily</option>
+                  <option value="Weekly">Weekly</option>
+                  <option value="Biweekly">Biweekly</option>
+                  <option value="Monthly">Monthly</option>
                 </select>
               </div>
               <div class="mb-3">
@@ -60,16 +60,7 @@
           </div>
       </div>
       <div class="col-6">
-        <!-- <ul class="row list-unstyled">
-        <% for(var i=0; i<posts.length; i++) {%>
-          <li class="col-6 justify-content-between mt-5">
-            <a href="/post/<%= posts[i]._id%>">
-              <img class="img-fluid" src="<%= posts[i].image%>">
-            </a>
-          </li>
-        <% } %>
-        </ul> -->
-        <div class="row justify-content-center mt-5">
+        <div class="row justify-content-center mt-5 fixed">
           <a class="btn btn-primary submit" href="/feed">Return to Dashboard</a>
         </div>  
       </div>  
