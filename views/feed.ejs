@@ -14,14 +14,16 @@
           </tr>
         </thead>
         <tbody>
-          <% for(var i=0; i<posts.length; i++) {%>
+          <% for(var i=0; i < posts.length; i++) {%>
             <% var date = new Date(posts[i].dateWatered); 
               var todaysDate = new Date(Date.now()); %>
+            
+
             <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="exampleModal<%= i %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
-                  <div class="modal-header" style="background-image: url('<%= posts[i].image%>'); height:160px"></div>
+                  <div class="modal-header" style="background-image: url(../imgs/pexels-sohail-nachiti-807598.jpg); background-size: cover; height:160px"></div>
                   <div class="modal-body">
                     <div class="plant-name">        
                       <h3><%= posts[i].nickname%></h3>
@@ -83,22 +85,25 @@
                 </div>
               </div>
             </div>
+
+            <!-- Table Row Display -->
             <tr data-bs-toggle="modal" data-bs-target="#exampleModal" style="cursor:pointer">
               <td style="text-align: center"><%= posts[i].nickname%></td>
               <td style="text-align: center"><%= posts[i].dateWatered%></td>
               <td style="text-align: center"><%= posts[i].dateFertilized%></td>
               <td style="text-align: center">
                 <% if(new Date(newDate).getTime() <= new Date(todaysDate).getTime()) { %>
-                  <span class="material-symbols-outlined" style="color:red">
+                  <span class="material-symbols-outlined" style="color:#3A5A40">
                     priority_high
                     </span>
                 <% } %>
               </td>
               <td style="text-align: center"><!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary dashboard-button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <button type="button" class="btn btn-primary dashboard-button" data-bs-toggle="modal" data-bs-target="#exampleModal<%= i %>">
                   View
                 </button></td>
             </tr>
+
           <% } %>
         </tbody>
       </table>
