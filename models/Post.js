@@ -11,11 +11,11 @@ const PostSchema = new mongoose.Schema({
   },
   image: {
     type: String,
-    require: false,
+    requireds: true,
   },
   cloudinaryId: {
     type: String,
-    require: true,
+    required: false,
   },
   datePurchased: {
     type: String,
@@ -27,7 +27,7 @@ const PostSchema = new mongoose.Schema({
   },
   temperature: {
     type: String,
-    required: true,
+    required: false,
   },
   water: {
     type: String,
@@ -35,7 +35,7 @@ const PostSchema = new mongoose.Schema({
   },
   dateWatered: {
     type: String,
-    required: false,
+    required: true,
   },
   dateFertilized: {
     type: String,
