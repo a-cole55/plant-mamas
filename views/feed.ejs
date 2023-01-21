@@ -15,6 +15,7 @@
         </thead>
         <tbody>
           <% for(var i=0; i<posts.length; i++) {%>
+            <% var date = new Date(posts[i].dateWatered); %>
             <!-- Modal -->
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog">
@@ -41,7 +42,7 @@
                       <span><%= posts[i].datePurchased%></span>
                     </div>
                     <div class="plant-info">
-                      <h4>Date Watered:</h4>
+                      <h4>Date Last Watered:</h4>
                       <span><%= posts[i].dateWatered%></span>
                     </div>
                     <div class="plant-info">
@@ -53,19 +54,21 @@
                       <span><%= posts[i].water%> </span>
                     </div>
                     <div class="plant-info">
-                      <h4>Current Date:</h4>
-                      <span><%= new Date(Date.now()) %></span>
-                    </div>
-                    <div class="plant-info">
-                      <span>
-                        <%= new Date(Date.now() + 30 * 86400000)%>
-                      </span>
-                    <% if(posts[i].water === "Weekly") {%>
-                      return(
-                      <span>
-                        <%= new Date(Date.now() + 30 * 86400000)%>
-                      </span>)
+                      <h4>Next Watering Date:</h4>
+                      <% if(posts[i].water === "weekly"){ %>
+                        <% var newDate = date.setDate(date.getDate() + 8); %>
+                        <span><%= new Date(newDate) %></span>
+                      <% } else if(posts[i].water === "Daily") { %>
+                        <% var newDate = date.setDate(date.getDate() + 2); %>
+                        <span><%= new Date(newDate) %></span>
+                      <% }else if(posts[i].water === "Biweekly") { %>
+                        <% var newDate = date.setDate(date.getDate() + 15); %>
+                        <span><%= new Date(newDate) %></span>
+                      <% }else{ %>
+                        <% var newDate = date.setDate(date.getDate() + 31); %>
+                        <span><%= new Date(newDate) %></span>
                       <% } %>
+                      <!-- <span><%= new Date(Date.now()) %></span> -->
                     </div>
 
                     <div class="plant-image">
