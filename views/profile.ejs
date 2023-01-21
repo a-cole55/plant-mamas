@@ -13,19 +13,19 @@
                   <input type="text" class="form-control" id="name" name="name">
               </div>
               <div class="mb-3">
-                <label for="nickname" class="form-label">Nickname</label>
-                <input class="form-control" id="nickname" name="nickname"></input>
+                <label for="nickname" class="form-label">Nickname<bold style="color:#D22B2B">*</bold></label>
+                <input class="form-control" id="nickname" name="nickname" required>
               </div>
               <div class="mb-3">
-                <label for="imgUpload" class="form-label">Image</label>
-                <input type="file" class="form-control" id="imageUpload" name="file">
+                <label for="imgUpload" class="form-label">Image<bold style="color:#D22B2B">*</bold></label>
+                <input type="file" class="form-control" id="imageUpload" name="file" required>
               </div>
               <div class="mb-3">
                 <label for="datePurchased" class="form-label">Date Purchased</label>
                 <input type="date" class="form-control" id="datePurchased" name="datePurchased">
               </div>
               <div class="mb-3">
-                <label for="lightConditions" class="form-label">Light Conditions</label>
+                <label for="lightConditions" class="form-label">Light Conditions<bold style="color:#D22B2B">*</bold></label>
                 <!-- <input type="text" class="form-control" id="lightConditions" name="lightConditions"> -->
                 <select name="lightConditions" id="lightConditions" type="text" class="form-control" required>
                   <option value="Lots">Lots of Light</option>
@@ -38,7 +38,7 @@
                 <input type="text" class="form-control" id="temperature" name="temperature">
               </div>
               <div class="mb-3">
-                <label for="water" class="form-label">Watering Frequency</label>
+                <label for="water" class="form-label">Watering Frequency<bold style="color:#D22B2B">*</bold></label>
                 <!-- <input type="text" class="form-control" id="water" name="water"> -->
                 <select name="water" id="water" type="text" class="form-control" required>
                   <option value="Daily">Daily</option>
@@ -48,12 +48,12 @@
                 </select>
               </div>
               <div class="mb-3">
-                <label for="dateWatered" class="form-label">Date Last Watered</label>
-                <input type="date" class="form-control" id="dateWatered" name="dateWatered">
+                <label for="dateWatered" class="form-label">Date Last Watered<bold style="color:#D22B2B">*</bold></label>
+                <input type="date" class="form-control" id="dateWatered" name="dateWatered" required>
               </div>
               <div class="mb-3">
                 <label for="dateFertilized" class="form-label">Date Last Fertilized</label>
-                <input type="date" class="form-control" id="dateFertilized" name="dateFertilized">
+                <input type="date" class="form-control" id="dateFertilized" name="dateFertilized" required>
               </div>
               <button type="submit" class="btn btn-primary submit" value="Upload">Submit</button>
             </form>
