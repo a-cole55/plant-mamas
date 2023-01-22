@@ -1,4 +1,5 @@
 <%- include('partials/min-header-dashboard') -%>
+<% var todaysDate = new Date(Date.now()); %>
   <div class="dashboard-container">
     <div class="container mt-5">
       <h2>Your Plant Dashboard</h2>
@@ -14,11 +15,10 @@
           </tr>
         </thead>
         <tbody>
-          <% for(var i=0; i < posts.length; i++) {%>
-            <% var date = new Date(posts[i].dateWatered); 
-              var todaysDate = new Date(Date.now()); %>
+          <% for(var i=0; i < posts.length; i++) { %>
+            <% if(posts[i].user == user.id) { %>
+            <% var date = new Date(posts[i].dateWatered); %>
             
-
             <!-- Modal -->
             <div class="modal fade" id="exampleModal<%= i %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog">
@@ -91,19 +91,20 @@
               <td style="text-align: center"><%= posts[i].nickname%></td>
               <td style="text-align: center"><%= posts[i].dateWatered%></td>
               <td style="text-align: center"><%= posts[i].dateFertilized%></td>
-              <td style="text-align: center">
                 <% if(new Date(newDate).getTime() <= new Date(todaysDate).getTime()) { %>
-                  <span class="material-symbols-outlined" style="color:#3A5A40">
-                    priority_high
-                    </span>
-                <% } %>
-              </td>
+                  <td style="text-align: center; background-color: #DAD7CD;">
+                    <span class="material-symbols-outlined" style="color:#3A5A40"> priority_high </span>
+                  </td>
+                <% }else{ %>
+                  <td style="text-align: center;"></td>
+                  <% }
+               %>
               <td style="text-align: center"><!-- Button trigger modal -->
                 <button type="button" class="btn btn-primary dashboard-button" data-bs-toggle="modal" data-bs-target="#exampleModal<%= i %>">
                   View
                 </button></td>
             </tr>
-
+          <% } %>
           <% } %>
         </tbody>
       </table>

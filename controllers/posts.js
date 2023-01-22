@@ -12,8 +12,8 @@ module.exports = {
   },
   getFeed: async (req, res) => {
     try {
-      const posts = await Post.find().sort({ createdAt: "desc" }).lean();
-      res.render("feed.ejs", { posts: posts });
+      const posts = await Post.find({ user: req.user.id }).sort({ nickname: "asc" }).lean();
+      res.render("feed.ejs", { posts: posts, user: req.user });
     } catch (err) {
       console.log(err);
     }
@@ -46,7 +46,7 @@ module.exports = {
 
       });
       console.log("Post has been added!");
-      res.redirect("/profile");
+      res.redirect("/success");
     } catch (err) {
       console.log(err);
     }
