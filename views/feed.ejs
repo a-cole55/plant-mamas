@@ -50,7 +50,13 @@
                     </div>
                     <div class="plant-info">
                       <h4>Date Fertilized:</h4>
-                      <span><%= posts[i].dateFertilized%></span>
+
+                        <% if(posts[i].dateFertilized){ %>
+                          <span><%= posts[i].dateFertilized%></span>
+                        <% }else{ %>
+                          <span style="font-weight:bold; color:blue">Data Not Provided by User</bold></span>
+                        <% } %>
+
                     </div>
                     <div class="plant-info">
                       <h4>Water Frequency:</h4>
@@ -96,7 +102,22 @@
             <tr data-bs-toggle="modal" data-bs-target="#exampleModal" style="cursor:pointer">
               <td style="text-align: center"><%= posts[i].nickname%></td>
               <td style="text-align: center"><%= posts[i].dateWatered%></td>
-              <td style="text-align: center"><input type="checkbox"></td>
+
+
+              <!-- Date Watered Checkbox -->
+              <td style="text-align: center">
+                <form
+                    class="col-1"
+                    action="/post/updateDateWatered/<%= posts[i]._id %>?_method=PUT"
+                    method="POST"
+                >
+                  <button class="btn btn-primary fa" type="submit"></button>
+                </form>
+              </td>
+
+
+
+
                 <% if(new Date(newDate).getTime() <= new Date(todaysDate).getTime()) { %>
                   <td style="text-align: center; background-color: #DAD7CD;">
                     <span class="material-symbols-outlined" style="color:#3A5A40"> priority_high </span>

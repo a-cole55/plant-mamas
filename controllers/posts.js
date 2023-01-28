@@ -51,20 +51,20 @@ module.exports = {
       console.log(err);
     }
   },
-  // likePost: async (req, res) => {
-  //   try {
-  //     await Post.findOneAndUpdate(
-  //       { _id: req.params.id },
-  //       {
-  //         $inc: { likes: 1 },
-  //       }
-  //     );
-  //     console.log("Likes +1");
-  //     res.redirect(`/post/${req.params.id}`);
-  //   } catch (err) {
-  //     console.log(err);
-  //   }
-  // },
+  updateDateWatered: async (req, res) => {
+    try {
+      await Post.findOneAndUpdate(
+        { _id: req.params.id },
+        {
+          dateWatered: new Date(Date.now()).toDateString()},
+      );
+      console.log("Date Updated!");
+      res.redirect("/feed");
+    } catch (err) {
+      console.log(err);
+      res.redirect("/feed");
+    }
+  },
   deletePost: async (req, res) => {
     try {
       // Find post by id
@@ -76,6 +76,7 @@ module.exports = {
       console.log("Deleted Post");
       res.redirect("/feed");
     } catch (err) {
+      console.log(err);
       res.redirect("/feed");
     }
   },
