@@ -77,16 +77,16 @@
                     <div class="plant-info">
                       <h4>Next Watering Date:</h4>
                       <% if(posts[i].water === "weekly"){ %>
-                        <% var newDate = date.setDate(date.getDate() + 8); %>
+                        <% var newDate = date.setDate(date.getDate() + 7); %>
                         <span><%= new Date(newDate) %></span>
                       <% } else if(posts[i].water === "Daily") { %>
-                        <% var newDate = date.setDate(date.getDate() + 2); %>
+                        <% var newDate = date.setDate(date.getDate() + 1); %>
                         <span><%= new Date(newDate) %></span>
                       <% }else if(posts[i].water === "Biweekly") { %>
-                        <% var newDate = date.setDate(date.getDate() + 15); %>
+                        <% var newDate = date.setDate(date.getDate() + 14); %>
                         <span><%= new Date(newDate) %></span>
                       <% }else{ %>
-                        <% var newDate = date.setDate(date.getDate() + 31); %>
+                        <% var newDate = date.setDate(date.getDate() + 30); %>
                         <span><%= new Date(newDate) %></span>
                       <% } %>
                     </div>
@@ -122,9 +122,7 @@
                     style="text-align:center"
                 >
                   <button class="btn btn-secondary" type="submit" style="background-color:#3A5A40">
-                    <span class="material-symbols-outlined">
-                      check_box
-                    </span>
+                    <span class="material-symbols-outlined">check_box</span>
                   </button>
                 </form>
               </td>
