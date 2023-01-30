@@ -9097,7 +9097,7 @@ textarea.form-control-lg {
     display: flex;
     justify-content: space-evenly; }
   .navLinks {
-    justify-content: flex-start; }
+    justify-content: center; }
     .navLinks .mainNav {
       justify-content: center; }
     .navLinks ul {
