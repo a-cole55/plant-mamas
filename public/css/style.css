@@ -9075,6 +9075,38 @@ textarea.form-control-lg {
       background-color: #5b4630;
       border-color: #5b4630; }
 
+@media screen and (max-width: 460px) {
+  .home-container {
+    margin-top: 10px;
+    min-height: 70vh;
+    background-size: auto; }
+  .home-context {
+    height: 600px; }
+  .text-center {
+    margin-top: 120px; }
+  .home-logo {
+    border-radius: 20em;
+    width: 350px;
+    transition: all 0.9s ease;
+    -webkit-transition: all 0.9s ease; }
+    .home-logo:hover {
+      transform: rotate(30deg); }
+  .actions {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly; }
+  .navLinks {
+    justify-content: center; }
+    .navLinks .mainNav {
+      justify-content: center; }
+    .navLinks ul {
+      justify-content: center; }
+    .navLinks li {
+      width: 80px; }
+      .navLinks li a {
+        font-size: 16px; } }
+
 .signup-container {
   margin-top: 100px;
   min-height: 100vh;
