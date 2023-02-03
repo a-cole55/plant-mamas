@@ -9351,7 +9351,9 @@ textarea.form-control-lg {
       font-size: 52px; }
     .dashboard-container .subheading {
       font-size: 12px; }
-    .dashboard-container th, .dashboard-container tbody, .dashboard-container #plant-nickname {
+    .dashboard-container th,
+    .dashboard-container tbody,
+    .dashboard-container #plant-nickname {
       font-size: 12px; } }
   @media screen and (max-width: 490px) {
     .dashboard-container .heading {
