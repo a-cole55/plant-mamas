@@ -117,29 +117,31 @@
   }
   @media screen and (max-width: 600px) {
     padding: 0 25px;
-    .subheading{
+    .subheading {
       font-size: 15px;
-      }
+    }
   }
   @media screen and (max-width: 520px) {
     .heading {
       font-size: 52px;
     }
-    .subheading{
-        font-size: 12px;
-        }
-    th, tbody, #plant-nickname {
-        font-size:12px;
+    .subheading {
+      font-size: 12px;
+    }
+    th,
+    tbody,
+    #plant-nickname {
+      font-size: 12px;
     }
   }
   @media screen and (max-width: 490px) {
     .heading {
       font-size: 50px;
     }
-}
-@media screen and (max-width: 420px) {
-  .heading {
-    font-size: 40px;
   }
-}
+  @media screen and (max-width: 420px) {
+    .heading {
+      font-size: 40px;
+    }
+  }
 }
