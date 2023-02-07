@@ -2,7 +2,7 @@
 @import "mixins";
 
 .dashboard-container{
-    @include login
+    @include container-styling
 }
 .heading{
     font-family: $cursiveFont;
