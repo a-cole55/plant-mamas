@@ -9044,7 +9044,7 @@ textarea.form-control-lg {
 .home-container {
   margin-top: 60px;
   min-height: 100vh;
-  background-image: url("../imgs/background-plants.jpg");
+  background-image: url("../imgs/home-bg-med.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -9078,8 +9078,9 @@ textarea.form-control-lg {
 @media screen and (max-width: 460px) {
   .home-container {
     margin-top: 10px;
-    min-height: 70vh;
-    background-size: auto; }
+    height: auto;
+    background-size: cover;
+    background-image: url("../imgs/home-bg-sm.jpg"); }
   .home-context {
     height: 600px; }
   .text-center {
@@ -9093,7 +9094,7 @@ textarea.form-control-lg {
       transform: rotate(30deg); }
   .actions {
     width: 100%;
-    margin: 0;
+    margin: 35px 0;
     display: flex;
     justify-content: space-evenly; }
   .navLinks {
