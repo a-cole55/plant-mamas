@@ -9327,40 +9327,6 @@ textarea.form-control-lg {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: right; }
-  @media screen and (max-width: 1100px) {
-    .dashboard-container {
-      padding: 0 100px; } }
-  @media screen and (max-width: 1000px) {
-    .dashboard-container {
-      padding: 0 75px; } }
-  @media screen and (max-width: 820px) {
-    .dashboard-container {
-      padding: 0 50px; }
-      .dashboard-container .heading {
-        font-size: 70px; } }
-  @media screen and (max-width: 700px) {
-    .dashboard-container .heading {
-      font-size: 60px; } }
-  @media screen and (max-width: 600px) {
-    .dashboard-container {
-      padding: 0 25px; }
-      .dashboard-container .subheading {
-        font-size: 15px; } }
-  @media screen and (max-width: 520px) {
-    .dashboard-container .heading {
-      font-size: 52px; }
-    .dashboard-container .subheading {
-      font-size: 12px; }
-    .dashboard-container th,
-    .dashboard-container tbody,
-    .dashboard-container #plant-nickname {
-      font-size: 12px; } }
-  @media screen and (max-width: 490px) {
-    .dashboard-container .heading {
-      font-size: 50px; } }
-  @media screen and (max-width: 420px) {
-    .dashboard-container .heading {
-      font-size: 40px; } }
 
 .heading {
   font-family: "Mr De Haviland", cursive;
@@ -9433,6 +9399,56 @@ th {
   align-items: center;
   width: 100%;
   padding: 0; }
+
+@media screen and (max-width: 1100px) {
+  .dashboard-container {
+    padding: 0 100px; } }
+
+@media screen and (max-width: 1000px) {
+  .dashboard-container {
+    padding: 0 75px; } }
+
+@media screen and (max-width: 820px) {
+  .dashboard-container {
+    padding: 0 50px; }
+  .heading {
+    font-size: 70px; } }
+
+@media screen and (max-width: 700px) {
+  .heading {
+    font-size: 60px; } }
+
+@media screen and (max-width: 600px) {
+  .dashboard-container {
+    padding: 0 25px; }
+  .subheading {
+    font-size: 15px; } }
+
+@media screen and (max-width: 520px) {
+  .heading {
+    font-size: 52px; }
+  .subheading {
+    font-size: 12px; }
+  th,
+  tbody,
+  #plant-nickname {
+    font-size: 12px; } }
+
+@media screen and (max-width: 490px) {
+  .heading {
+    font-size: 50px; } }
+
+@media screen and (max-width: 420px) {
+  .heading {
+    font-size: 40px; }
+  .modal-dialog {
+    width: 370px; }
+  .plant-name > h3, .plant-name > .h3 {
+    font-size: 16px; }
+  .plant-info h4, .plant-info .h4 {
+    font-size: 12px; }
+  .plant-info span {
+    font-size: 12px; } }
 
 .btn {
   color: white; }
