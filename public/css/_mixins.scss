@@ -1,47 +1,89 @@
 @import "variables";
 
-
 @mixin login {
-    margin-top:100px;
-    min-height:100vh;
-    width:100%;
-    padding:0 325px;
-    background-image: url("../imgs/home-img-medium.jpg");
-    background-size:contain;
+  margin-top: 80px;
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("../imgs/home-img-medium.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: right;
+  h1 {
+    font-family: $cursiveFont;
+    font-weight: bold;
+    font-size: 82px;
+    margin-bottom: 35px;
+    color: $secondaryColor;
+    margin-left: 20px;
+  }
+  .form-label {
+    font-family: $defaultFont;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+  }
+  .form-control {
+    width: 450px;
+  }
+  .submit {
+    background-color: $secondaryColor;
+    border-color: $secondaryColor;
+    &:hover {
+      background-color: $primaryColor;
+      border-color: $primaryColor;
+    }
+  }
+  @media screen and (max-width: 820px) {
+    .form-control,
+    .form-label {
+      width: 380px;
+    }
+    h1 {
+      font-size: 70px;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    background-size: contain;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: right;
-    h1{
-        font-family: $cursiveFont;
-        font-weight: bold;
-        font-size:82px;
-        margin-bottom: 35px;
-        color:$secondaryColor;
-        margin-left:20px;
+    .form-control,
+    .form-label {
+      max-width: 310px;
     }
-    .form-label{
-        font-family: $defaultFont;
-        text-transform: uppercase;
-        font-weight: 600;
-        letter-spacing: 0.2em;
+    form {
+      background-color: white;
+      width: 320px;
+      height: 220px;
+      border-radius: 0.2em;
+      padding: 5px;
+      box-shadow: 1px 1px 3px rgba(94, 94, 94, 0.5);
     }
-    .submit{
-        background-color: $secondaryColor;
-        border-color: $secondaryColor;
-        &:hover{
-            background-color: $primaryColor;
-            border-color: $primaryColor;  
-        }
+  }
+  @media screen and (max-width: 600px) {
+    .form-label {
+      font-size: 14px;
     }
+  }
+  @media screen and (max-width: 490px) {
+    margin-top: 70px;
+    background-size: contain;
+    height: auto;
+    overflow-y: none;
+    .form-control,
+    .form-label {
+      width: 230px;
+    }
+    .form-label,
+    .submit {
+      font-size: 14px;
+    }
+    form {
+      width: 240px;
+    }
+    h1 {
+      font-size: 60px;
+    }
+  }
 }
-
-// @mixin header{
-//     h2{
-//         font-family: $cursiveFont;
-//         font-weight: bold;
-//         font-size:70px;
-//         margin-bottom: 35px;
-//         color:$secondaryColor;
-//         margin-left:20px;
-//     }
-// }
