@@ -1,5 +1,5 @@
 @import "variables";
-$primary:$tertiaryColor;
+$primary: $tertiaryColor;
 
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 @import "mixins";
@@ -8,107 +8,136 @@ $primary:$tertiaryColor;
 @import "profile";
 @import "feed";
 
-
 .btn {
   color: white;
-  &:hover{
-    color:white;
+  &:hover {
+    color: white;
   }
-  &:focus-visible{
+  &:focus-visible {
     background-color: $primary;
   }
 }
 //NavBar//
-.home{
-  display:flex;
+.home {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   background-color: white;
-  width:100%;
+  width: 100%;
   margin-top: 70px;
 }
-header, nav{
-  width:100%;
-  height:60px;
-  position:fixed;
-  top:0;
-  right:0;
+header,
+nav {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  right: 0;
   z-index: 10;
 }
-.mainNav{
-  height:60px;
-  width:100%;
+.mainNav {
+  height: 60px;
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
-nav{
-  box-shadow: 1px 1px 7px rgba(211,211,211,1);
+nav {
+  box-shadow: 1px 1px 7px rgba(211, 211, 211, 1);
   background-color: white;
 }
-ul{
-  display:flex;
+ul {
+  display: flex;
   flex-direction: row;
-  justify-content:flex-end;
+  justify-content: flex-end;
   align-items: center;
-  width:100%;
-  height:60px;
-  list-style:none;
+  width: 100%;
+  height: 60px;
+  list-style: none;
   text-align: center;
   margin-bottom: 0;
 }
-li{
-    text-decoration: none;
-    height:100%;
-    width:110px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 0.2em;
-
+li {
+  text-decoration: none;
+  height: 100%;
+  width: 110px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.2em;
 }
-li a{
+li a {
   color: black;
   text-decoration: none;
   text-align: center;
   font-size: 16px;
   background-color: white;
-  height:60px;
+  height: 60px;
   width: 100%;
   line-height: 4em;
 }
-li a:hover{
+li a:hover {
   background-color: $tertiaryColor;
-  color: #FFFFFF;
+  color: #ffffff;
   transition: none;
 }
 
-nav > a{
-    text-decoration: none;
+nav > a {
+  text-decoration: none;
 }
-#homeLogo{
+#homeLogo {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  }
-#logo{
-  width:62px;
-  height:60px;                               
+}
+#logo {
+  width: 62px;
+  height: 60px;
   margin: 0 0 0 30px;
   opacity: 1;
-  border-radius:50em;
+  border-radius: 50em;
 }
-.highlight{
+.highlight {
   background-color: $primaryColor;
   border-color: $tertiaryColor;
-  color:white;
-  &:hover{
-      background-color: $tertiaryColor;
-      border-color: $tertiaryColor;
+  color: white;
+  &:hover {
+    background-color: $tertiaryColor;
+    border-color: $tertiaryColor;
+  }
+}
+
+//success
+#success {
+  margin-top: 150px;
+}
+@media screen and (max-width: 820px) {
+  #success {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 700px) {
+  #success {
+    padding-left: 50px;
+  }
+}
+
+//login
+@media screen and (max-width: 490px) {
+  #login-form {
+    width: 250px;
+  }
+  #success {
+    padding-left: 10px;
   }
 }

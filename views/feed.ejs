@@ -1,153 +1,212 @@
-<%- include('partials/min-header-dashboard') -%>
-<% var todaysDate = new Date(Date.now()); %>
-  <div class="dashboard-container">
-    <div class="container mt-5">
-      <h2 class="heading"><%= user.userName[0].toUpperCase() + user.userName.substring(1).toLowerCase() %>'s Plant Dashboard</h2>
-      <p class="subheading">Here you can view your custom plant information. Enjoy!</p>            
-      <table class="table table-hover table-bordered table-background-color">
-        <thead class="table-dark">
-          <tr>
-            <th style="text-align: center">Plant Name</th>
-            <th style="text-align: center">Date Watered</th>
-            <th style="text-align: center">Click when 🪴 is watered</th>
-            <th style="text-align: center">Action Needed</th>
-            <th style="text-align: center">Additional Details</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% for(var i=0; i < posts.length; i++) { %>
-            <% if(posts[i].user == user.id) { %>
-            <% var date = new Date(posts[i].dateWatered); %>
-            
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal<%= i %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header" style="background-image: url(../imgs/pexels-sohail-nachiti-807598.jpg); background-size: cover; height:160px"></div>
-                  <div class="modal-body">
-                    <div class="plant-name">        
-                      <h3><%= posts[i].nickname.toUpperCase()%></h3>
-                    </div>
-                    <div class="plant-info">
-                      <h4>Official Plant Name:</h4>
-                      <span><%= posts[i].name%></span>
-                    </div>
+<%- include('partials/min-header-dashboard') -%> <% var todaysDate = new
+Date(Date.now()); %>
+<div class="dashboard-container">
+  <div class="container mt-5">
+    <h2 class="heading">
+      <%= user.userName[0].toUpperCase() +
+      user.userName.substring(1).toLowerCase() %>'s Dashboard
+    </h2>
+    <p class="subheading">
+      Here you can view your custom plant information. Enjoy!
+    </p>
+    <table class="table table-hover table-bordered table-background-color">
+      <thead class="table-dark">
+        <tr>
+          <th style="text-align: center">Plant Name</th>
+          <th style="text-align: center">Date Watered</th>
+          <th style="text-align: center">Click when 🪴 is watered</th>
+          <th style="text-align: center">Action Needed</th>
+          <th style="text-align: center">Additional Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for(var i=0; i < posts.length; i++) { %> <% if(posts[i].user ==
+        user.id) { %> <% var date = new Date(posts[i].dateWatered); %>
 
-                    <div class="plant-info">
-                      <h4>Ideal Temperature(s):</h4>
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="exampleModal<%= i %>"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div
+                class="modal-header"
+                style="
+                  background-image: url(../imgs/pexels-sohail-nachiti-807598.jpg);
+                  background-size: cover;
+                  height: 160px;
+                "
+              ></div>
+              <div class="modal-body">
+                <div class="plant-name">
+                  <h3><%= posts[i].nickname.toUpperCase()%></h3>
+                </div>
+                <div class="plant-info">
+                  <h4>Official Plant Name:</h4>
+                  <span><%= posts[i].name%></span>
+                </div>
 
-                      <% if(posts[i].temperature){ %>
-                        <span><%= posts[i].temperature%></span>
-                      <% }else{ %>
-                        <span style="font-weight:bold; color:#3A5A40">Data Not Provided by User</bold></span>
-                      <% } %>
-                    </div>
+                <div class="plant-info">
+                  <h4>Ideal Temperature(s):</h4>
 
-                    <div class="plant-info">
-                      <h4>Ideal Light Conditions:</h4>
-                      <span><%= posts[i].lightConditions%></span>
-                    </div>
-                    <div class="plant-info">
-                      <h4>Date Purchased:</h4>
-                      <% if(posts[i].datePurchased){ %>
-                        <span><%= posts[i].datePurchased%></span>
-                      <% }else{ %>
-                        <span style="font-weight:bold; color:#3A5A40">Data Not Provided by User</bold></span>
-                      <% } %>
-                    </div>
+                  <% if(posts[i].temperature){ %>
+                  <span><%= posts[i].temperature%></span>
+                  <% }else{ %>
+                  <span style="font-weight: bold; color: #3a5a40"
+                    >Data Not Provided by User</span
+                  >
+                  <% } %>
+                </div>
 
-                    <div class="plant-info">
-                      <h4>Date Last Watered:</h4>
-                      <span><%= posts[i].dateWatered%></span>
-                    </div>
-                    <div class="plant-info">
-                      <h4>Date Fertilized:</h4>
+                <div class="plant-info">
+                  <h4>Ideal Light Conditions:</h4>
+                  <span><%= posts[i].lightConditions%></span>
+                </div>
+                <div class="plant-info">
+                  <h4>Date Purchased:</h4>
+                  <% if(posts[i].datePurchased){ %>
+                  <span><%= posts[i].datePurchased%></span>
+                  <% }else{ %>
+                  <span style="font-weight: bold; color: #3a5a40"
+                    >Data Not Provided by User</span
+                  >
+                  <% } %>
+                </div>
 
-                        <% if(posts[i].dateFertilized){ %>
-                          <span><%= posts[i].dateFertilized%></span>
-                        <% }else{ %>
-                          <span style="font-weight:bold; color:#3A5A40">Data Not Provided by User</bold></span>
-                        <% } %>
+                <div class="plant-info">
+                  <h4>Date Last Watered:</h4>
+                  <span><%= posts[i].dateWatered%></span>
+                </div>
+                <div class="plant-info">
+                  <h4>Date Fertilized:</h4>
 
-                    </div>
-                    <div class="plant-info">
-                      <h4>Water Frequency:</h4>
-                      <span><%= posts[i].water%> </span>
-                    </div>
-                    <div class="plant-info">
-                      <h4>Next Watering Date:</h4>
-                      <% if(posts[i].water === "weekly"){ %>
-                        <% var newDate = date.setDate(date.getDate() + 7); %>
-                        <span><%= new Date(newDate) %></span>
-                      <% } else if(posts[i].water === "Daily") { %>
-                        <% var newDate = date.setDate(date.getDate() + 1); %>
-                        <span><%= new Date(newDate) %></span>
-                      <% }else if(posts[i].water === "Biweekly") { %>
-                        <% var newDate = date.setDate(date.getDate() + 14); %>
-                        <span><%= new Date(newDate) %></span>
-                      <% }else{ %>
-                        <% var newDate = date.setDate(date.getDate() + 30); %>
-                        <span><%= new Date(newDate) %></span>
-                      <% } %>
-                    </div>
+                  <% if(posts[i].dateFertilized){ %>
+                  <span><%= posts[i].dateFertilized%></span>
+                  <% }else{ %>
+                  <span style="font-weight: bold; color: #3a5a40"
+                    >Data Not Provided by User</span
+                  >
+                  <% } %>
+                </div>
+                <div class="plant-info">
+                  <h4>Water Frequency:</h4>
+                  <span><%= posts[i].water%> </span>
+                </div>
+                <div class="plant-info">
+                  <h4>Next Watering Date:</h4>
+                  <% if(posts[i].water === "weekly"){ %> <% var newDate =
+                  date.setDate(date.getDate() + 7); %>
+                  <span><%= new Date(newDate) %></span>
+                  <% } else if(posts[i].water === "Daily") { %> <% var newDate =
+                  date.setDate(date.getDate() + 1); %>
+                  <span><%= new Date(newDate) %></span>
+                  <% }else if(posts[i].water === "Biweekly") { %> <% var newDate
+                  = date.setDate(date.getDate() + 14); %>
+                  <span><%= new Date(newDate) %></span>
+                  <% }else{ %> <% var newDate = date.setDate(date.getDate() +
+                  30); %>
+                  <span><%= new Date(newDate) %></span>
+                  <% } %>
+                </div>
 
-                    <div class="plant-image">
-                      <img src= "<%= posts[i].image%>" alt="plant"/>
-                    </div>
-                  </div>
-                  <div class="modal-footer" style="background-color:#A3B18A">
-                    <button type="button" class="btn btn-secondary" style="background-color:#3A5A40" data-bs-dismiss="modal" >Close</button>
-                    <form
-                      action="/post/deletePost/<%= posts[i]._id %>?_method=DELETE"
-                      method="POST"
-                    >
-                      <button class="btn btn-primary fa" type="submit"><span class="material-symbols-outlined" style="font-size:large">delete</span></button>
-                    </form>
-                  </div>
+                <div class="plant-image">
+                  <img src="<%= posts[i].image%>" alt="plant" />
                 </div>
               </div>
-            </div>
-
-            <!-- Table Row Display -->
-            <tr data-bs-toggle="modal" data-bs-target="#exampleModal" style="cursor:pointer">
-              <td style="text-align: center; font-weight: bold; font-size:15px"><%= posts[i].nickname.toUpperCase()%></td>
-              <td style="text-align: center"><%= posts[i].dateWatered%></td>
-
-
-              <!-- Date Watered Checkbox -->
-              <td style="display: flex; flex-direction:row; justify-content: center; align-items: center;">
-                <form
-                    action="/post/updateDateWatered/<%= posts[i]._id %>?_method=PUT"
-                    method="POST"
-                    style="text-align:center"
+              <div class="modal-footer" style="background-color: #a3b18a">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  style="background-color: #3a5a40"
+                  data-bs-dismiss="modal"
                 >
-                  <button class="btn btn-secondary" type="submit" style="background-color:#3A5A40">
-                    <span class="material-symbols-outlined">check_box</span>
+                  Close
+                </button>
+                <form
+                  action="/post/deletePost/<%= posts[i]._id %>?_method=DELETE"
+                  method="POST"
+                >
+                  <button class="btn btn-primary fa" type="submit">
+                    <span
+                      class="material-symbols-outlined"
+                      style="font-size: large"
+                      >delete</span
+                    >
                   </button>
                 </form>
-              </td>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <!-- Table Row Display -->
+        <tr
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+          style="cursor: pointer"
+        >
+          <td
+            style="text-align: center; font-weight: bold; font-size: 15px"
+            id="plant-nickname"
+          >
+            <%= posts[i].nickname.toUpperCase()%>
+          </td>
+          <td style="text-align: center"><%= posts[i].dateWatered%></td>
 
+          <!-- Date Watered Checkbox -->
+          <td
+            style="
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+              align-items: center;
+            "
+          >
+            <form
+              action="/post/updateDateWatered/<%= posts[i]._id %>?_method=PUT"
+              method="POST"
+              style="text-align: center"
+            >
+              <button
+                class="btn btn-secondary"
+                type="submit"
+                style="background-color: #3a5a40"
+              >
+                <span class="material-symbols-outlined">check_box</span>
+              </button>
+            </form>
+          </td>
 
-
-                <% if(new Date(newDate).getTime() <= new Date(todaysDate).getTime()) { %>
-                  <td style="text-align: center; background-color: #add8e6;">
-                    <!-- <span class="material-symbols-outlined" style="color:#3A5A40"> priority_high </span> -->
-                    <span class="material-symbols-outlined" style="font-size:35px">water_drop</span>
-                  </td>
-                <% }else{ %>
-                  <td style="text-align: center;"></td>
-                  <% }
-               %>
-              <td style="text-align: center"><!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary dashboard-button" data-bs-toggle="modal" data-bs-target="#exampleModal<%= i %>">
-                  View
-                </button></td>
-            </tr>
+          <% if(new Date(newDate).getTime() <= new Date(todaysDate).getTime()) {
+          %>
+          <td style="text-align: center; background-color: #add8e6">
+            <!-- <span class="material-symbols-outlined" style="color:#3A5A40"> priority_high </span> -->
+            <span class="material-symbols-outlined" style="font-size: 35px"
+              >water_drop</span
+            >
+          </td>
+          <% }else{ %>
+          <td style="text-align: center"></td>
           <% } %>
-          <% } %>
-        </tbody>
-      </table>
-    </div>
-  </div>  
+          <td style="text-align: center">
+            <!-- Button trigger modal -->
+            <button
+              type="button"
+              class="btn btn-primary dashboard-button"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal<%= i %>"
+            >
+              View
+            </button>
+          </td>
+        </tr>
+        <% } %> <% } %>
+      </tbody>
+    </table>
+  </div>
+</div>
 <%- include('partials/footer') -%>
