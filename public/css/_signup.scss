@@ -58,9 +58,10 @@
         }
       }
       @media screen and (max-width: 490px) {
-        margin-top: 50px;
+        margin-top: 25px;
         overflow-y:hidden;
         background-size:cover;
+        padding-top: 50px;
 
         .form-control,
         .form-label {

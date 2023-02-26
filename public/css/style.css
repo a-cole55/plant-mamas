@@ -9225,9 +9225,10 @@ textarea.form-control-lg {
         box-shadow: 1px 1px 3px rgba(94, 94, 94, 0.5); } }
   @media screen and (max-width: 490px) {
     .signup-container {
-      margin-top: 50px;
+      margin-top: 25px;
       overflow-y: hidden;
-      background-size: cover; }
+      background-size: cover;
+      padding-top: 50px; }
       .signup-container .form-control,
       .signup-container .form-label {
         width: 330px; }
