@@ -4,6 +4,7 @@
 .dashboard-container {
   @include container-styling;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: flex-start;
 }
