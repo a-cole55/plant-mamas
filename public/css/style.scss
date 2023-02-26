@@ -133,10 +133,13 @@ nav > a {
 }
 
 //login
+#login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 @media screen and (max-width: 490px) {
-  #login-form {
-    width: 250px;
-  }
   #success {
     padding-left: 10px;
   }

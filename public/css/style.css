@@ -9111,14 +9111,16 @@ textarea.form-control-lg {
         font-size: 16px; } }
 
 .signup-container {
-  margin-top: 80px;
   min-height: 100vh;
   width: 100%;
   background-image: url("../imgs/home-img-medium.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: right; }
+  background-position: right;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; }
   .signup-container h1, .signup-container .h1 {
     font-family: "Mr De Haviland", cursive;
     font-weight: bold;
@@ -9153,19 +9155,17 @@ textarea.form-control-lg {
       background-position: right; }
       .signup-container .form-control,
       .signup-container .form-label {
-        max-width: 310px; }
+        max-width: 340px; }
       .signup-container #login-form {
         background-color: white;
-        width: 340px;
+        width: 350px;
         height: 220px;
         border-radius: 0.2em;
         padding: 5px;
         box-shadow: 1px 1px 3px rgba(94, 94, 94, 0.5); } }
   @media screen and (max-width: 600px) {
     .signup-container .form-label {
-      font-size: 14px; }
-    .signup-container #login-form {
-      width: 330px; } }
+      font-size: 14px; } }
   @media screen and (max-width: 490px) {
     .signup-container {
       margin-top: 70px;
@@ -9173,16 +9173,16 @@ textarea.form-control-lg {
       height: auto; }
       .signup-container .form-control,
       .signup-container .form-label {
-        width: 230px; }
-      .signup-container .form-label,
+        width: 330px; }
       .signup-container .submit {
         font-size: 14px; }
-      .signup-container form {
-        width: 240px; }
       .signup-container h1, .signup-container .h1 {
-        font-size: 60px; }
-      .signup-container #login-form {
-        width: 250px; } }
+        font-size: 60px; } }
+  .signup-container .signup-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
   @media screen and (max-width: 980px) {
     .signup-container {
       background-size: contain;
@@ -9215,10 +9215,10 @@ textarea.form-control-lg {
       background-position: right; }
       .signup-container .form-control,
       .signup-container .form-label {
-        max-width: 320px; }
+        max-width: 340px; }
       .signup-container .signup-form {
         background-color: white;
-        width: 330px;
+        width: 350px;
         height: 420px;
         border-radius: 0.2em;
         padding: 5px;
@@ -9226,24 +9226,22 @@ textarea.form-control-lg {
   @media screen and (max-width: 490px) {
     .signup-container {
       margin-top: 50px;
-      background-size: contain;
-      height: auto;
-      overflow-y: none; }
+      overflow-y: hidden;
+      background-size: cover; }
       .signup-container .form-control,
       .signup-container .form-label {
-        width: 240px; }
+        width: 330px; }
       .signup-container .form-label,
       .signup-container .submit {
         font-size: 12px; }
       .signup-container .signup-form {
-        width: 250px; }
+        width: 350px; }
       .signup-container h1, .signup-container .h1 {
         font-size: 60px; }
       .signup-container #emailHelp {
         font-size: 11.5px; } }
 
 .profile-container {
-  margin-top: 80px;
   min-height: 100vh;
   width: 100%;
   background-image: url("../imgs/home-img-medium.jpg");
@@ -9251,6 +9249,9 @@ textarea.form-control-lg {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: right;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   padding: 0 0 100px 200px; }
   .profile-container h1, .profile-container .h1 {
     font-family: "Mr De Haviland", cursive;
@@ -9286,19 +9287,17 @@ textarea.form-control-lg {
       background-position: right; }
       .profile-container .form-control,
       .profile-container .form-label {
-        max-width: 310px; }
+        max-width: 340px; }
       .profile-container #login-form {
         background-color: white;
-        width: 340px;
+        width: 350px;
         height: 220px;
         border-radius: 0.2em;
         padding: 5px;
         box-shadow: 1px 1px 3px rgba(94, 94, 94, 0.5); } }
   @media screen and (max-width: 600px) {
     .profile-container .form-label {
-      font-size: 14px; }
-    .profile-container #login-form {
-      width: 330px; } }
+      font-size: 14px; } }
   @media screen and (max-width: 490px) {
     .profile-container {
       margin-top: 70px;
@@ -9306,16 +9305,11 @@ textarea.form-control-lg {
       height: auto; }
       .profile-container .form-control,
       .profile-container .form-label {
-        width: 230px; }
-      .profile-container .form-label,
+        width: 330px; }
       .profile-container .submit {
         font-size: 14px; }
-      .profile-container form {
-        width: 240px; }
       .profile-container h1, .profile-container .h1 {
-        font-size: 60px; }
-      .profile-container #login-form {
-        width: 250px; } }
+        font-size: 60px; } }
 
 .welcome-message {
   margin-bottom: 0;
@@ -9621,8 +9615,12 @@ nav > a {
   #success {
     padding-left: 50px; } }
 
+#login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
 @media screen and (max-width: 490px) {
-  #login-form {
-    width: 250px; }
   #success {
     padding-left: 10px; } }
