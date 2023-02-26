@@ -3,6 +3,12 @@
 
 .signup-container{
     @include login;
+    .signup-form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
     @media screen and (max-width: 980px) {
         background-size: contain;
         background-repeat: no-repeat;
@@ -40,11 +46,11 @@
         background-position: right;
         .form-control,
         .form-label {
-          max-width: 320px;
+          max-width: 340px;
         }
         .signup-form {
           background-color: white;
-          width: 330px;
+          width: 350px;
           height: 420px;
           border-radius: 0.2em;
           padding: 5px;
@@ -53,19 +59,19 @@
       }
       @media screen and (max-width: 490px) {
         margin-top: 50px;
-        background-size: contain;
-        height:auto;
-        overflow-y: none;
+        overflow-y:hidden;
+        background-size:cover;
+
         .form-control,
         .form-label {
-          width: 240px;
+          width: 330px;
         }
         .form-label,
         .submit {
           font-size: 12px;
         }
         .signup-form {
-          width: 250px;
+          width: 350px;
         }
         h1 {
           font-size: 60px;
