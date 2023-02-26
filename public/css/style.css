@@ -9253,7 +9253,11 @@ textarea.form-control-lg {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 0 0 100px 200px; }
+  margin: 100px 0 0 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; }
   .profile-container h1, .profile-container .h1 {
     font-family: "Mr De Haviland", cursive;
     font-weight: bold;
@@ -9314,7 +9318,7 @@ textarea.form-control-lg {
 
 .welcome-message {
   margin-bottom: 0;
-  letter-spacing: 0.25rem; }
+  letter-spacing: 0.35rem; }
 
 .fixed {
   position: fixed; }
@@ -9322,7 +9326,7 @@ textarea.form-control-lg {
 @media screen and (max-width: 930px) {
   .add-plant {
     background-color: white;
-    max-width: 460px;
+    max-width: 450px;
     height: 820px;
     border-radius: 0.2em;
     padding: 5px;
@@ -9330,17 +9334,21 @@ textarea.form-control-lg {
 
 @media screen and (max-width: 820px) {
   .profile-container {
-    margin-top: 100px;
+    background-size: cover;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .form-control,
+  .form-label {
+    width: 480px; }
+  .add-plant {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 0 100px 0; }
-  .form-control,
-  .form-label {
-    width: 380px; }
-  .add-plant {
-    width: 400px; }
+    width: 500px; }
   h1, .h1 {
     font-size: 70px; } }
 
@@ -9379,6 +9387,7 @@ textarea.form-control-lg {
   background-attachment: fixed;
   background-position: right;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: flex-start; }
 
