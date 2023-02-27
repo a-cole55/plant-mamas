@@ -9393,7 +9393,8 @@ textarea.form-control-lg {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start; }
+  align-items: flex-start;
+  padding-bottom: 50px; }
 
 .heading {
   font-family: "Mr De Haviland", cursive;
@@ -9496,6 +9497,8 @@ th {
     font-size: 50px; } }
 
 @media screen and (max-width: 420px) {
+  .dashboard-container {
+    padding-bottom: 0; }
   .heading {
     font-size: 40px; }
   .modal-dialog {
