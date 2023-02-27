@@ -9354,7 +9354,7 @@ textarea.form-control-lg {
 
 @media screen and (max-width: 700px) {
   .add-plant {
-    width: 340px; }
+    margin-bottom: 100px; }
   .add-plant-form {
     background-color: none;
     width: 400px;
@@ -9364,6 +9364,13 @@ textarea.form-control-lg {
     box-shadow: none; } }
 
 @media screen and (max-width: 490px) {
+  .welcome-message {
+    margin: 100px 0 0 0; }
+  .add-plant-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
   .form-control,
   .form-label {
     width: 240px; }
@@ -9371,7 +9378,7 @@ textarea.form-control-lg {
   .submit {
     font-size: 12px; }
   .add-plant {
-    width: 260px; }
+    width: 350px; }
   h1, .h1 {
     font-size: 60px; }
   #emailHelp {
