@@ -5,15 +5,15 @@
   @include container-styling;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: flex-start;
+  align-items: center;
 }
 .heading {
   font-family: $cursiveFont;
   font-weight: bold;
   font-size: 74px;
   letter-spacing: 0.2rem;
-  margin-bottom: 0;
+  margin: 0 0 0 5px;
   color: $secondaryColor;
 }
 .subheading {
