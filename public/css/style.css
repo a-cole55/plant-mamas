@@ -9257,7 +9257,8 @@ textarea.form-control-lg {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start; }
+  align-items: flex-start;
+  padding-bottom: 100px; }
   .profile-container h1, .profile-container .h1 {
     font-family: "Mr De Haviland", cursive;
     font-weight: bold;
@@ -9336,9 +9337,6 @@ textarea.form-control-lg {
   .profile-container {
     background-size: cover;
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center; }
   .form-control,
   .form-label {
@@ -9353,8 +9351,6 @@ textarea.form-control-lg {
     font-size: 70px; } }
 
 @media screen and (max-width: 700px) {
-  .add-plant {
-    margin-bottom: 100px; }
   .add-plant-form {
     background-color: none;
     width: 400px;
@@ -9363,22 +9359,20 @@ textarea.form-control-lg {
     padding: 5px;
     box-shadow: none; } }
 
-@media screen and (max-width: 490px) {
+@media screen and (max-width: 420px) {
   .welcome-message {
     margin: 100px 0 0 0; }
   .add-plant-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; }
-  .form-control,
-  .form-label {
-    width: 240px; }
+    align-items: center;
+    width: 350px; }
+  .add-plant {
+    width: 360px; }
   .form-label,
   .submit {
     font-size: 12px; }
-  .add-plant {
-    width: 350px; }
   h1, .h1 {
     font-size: 60px; }
   #emailHelp {
