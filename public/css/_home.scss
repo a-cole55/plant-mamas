@@ -69,7 +69,8 @@
     width: 350px;
   }
   .navLinks {
-    justify-content: center;
+    justify-content: flex-end;
+    margin-right:10px;
     .mainNav {
       justify-content: center;
     }

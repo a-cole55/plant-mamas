@@ -9100,7 +9100,8 @@ textarea.form-control-lg {
   .home-logo {
     width: 350px; }
   .navLinks {
-    justify-content: center; }
+    justify-content: flex-end;
+    margin-right: 10px; }
     .navLinks .mainNav {
       justify-content: center; }
     .navLinks ul {
