@@ -9113,6 +9113,7 @@ textarea.form-control-lg {
 .signup-container {
   min-height: 100vh;
   width: 100%;
+  margin-top: 60px;
   background-image: url("../imgs/home-img-medium.jpg");
   background-size: contain;
   background-repeat: no-repeat;
@@ -9245,6 +9246,7 @@ textarea.form-control-lg {
 .profile-container {
   min-height: 100vh;
   width: 100%;
+  margin-top: 60px;
   background-image: url("../imgs/home-img-medium.jpg");
   background-size: contain;
   background-repeat: no-repeat;
@@ -9390,7 +9392,7 @@ textarea.form-control-lg {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center; }
+  align-items: flex-start; }
 
 .heading {
   font-family: "Mr De Haviland", cursive;
