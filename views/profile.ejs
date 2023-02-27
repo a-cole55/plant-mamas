@@ -1,4 +1,10 @@
 <%- include('partials/min-header') -%>
+<!-- Date Calculation -->
+<% var todaysDate = new Date(); 
+let year = todaysDate.getFullYear();
+let date = todaysDate.getDate();
+let month = todaysDate.getMonth() + 1 %>
+
 <div class="profile-container">
   <h1 class="welcome-message">Add Plant</h1>
   <div class="add-plant">
@@ -34,6 +40,7 @@
         <label for="datePurchased" class="form-label">Date Purchased</label>
         <input
           type="date"
+          max= "<%= year%>-0<%= month%>-<%= date%>"
           class="form-control"
           id="datePurchased"
           name="datePurchased"
@@ -89,6 +96,7 @@
         >
         <input
           type="date"
+          max="<%= year%>-0<%= month%>-<%= date%>"
           class="form-control"
           id="dateWatered"
           name="dateWatered"
@@ -101,6 +109,7 @@
         >
         <input
           type="date"
+          max="<%= year%>-0<%= month%>-<%= date%>"
           class="form-control"
           id="dateFertilized"
           name="dateFertilized"
