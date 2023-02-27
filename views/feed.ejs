@@ -9,6 +9,8 @@
     <p class="subheading">
       Here you can view your custom plant information. Enjoy!
     </p>
+
+<% if (posts.length > 0) { %>
     <table class="table table-hover table-bordered table-background-color">
       <thead class="table-dark">
         <tr>
@@ -207,6 +209,9 @@
         <% } %> <% } %>
       </tbody>
     </table>
+<%} else { %>
+  <a class="btn btn-primary submit" href="/profile">Add New Plant</a>
+<% } %>
   </div>
 </div>
 <%- include('partials/footer') -%>
