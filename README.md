@@ -7,7 +7,7 @@ This is a full-stack web application that allows users to track important inform
 
 How It's Made: Tech used: EJS, NodeJS, Express, and Bootstrap (for the modal)
 
-Optimizations: I would like to connect this app to a plant API (currently exploring: ) so that the user doesn't have to manually enter information about their plant like ideal temperatures, amount of sunlight needed, and official plant name. The goal is for the user to select the official plant name and this information will auto-populate. I'm also in the process of converting this app to React. Why React?... Last goal is to make plant information editable after it has been added to the database.
+Optimizations: I would like to connect this app to a plant API (currently exploring: https://perenual.com/docs/api) so that the user doesn't have to manually enter information about their plant such as amount of sunlight needed, watering frequency, and official plant name. The goal is for the user to select the official plant name and this information will auto-populate. Last goal is to make plant information editable after it has been added to the database.
 
 Challenges Faced:
 
