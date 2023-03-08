@@ -52,12 +52,17 @@ function getPlant(plantResults){
 
        plantListContainer.classList.add("search-results-container");
        plantListItem.setAttribute("id", element.id);
+       plantListItem.onclick = function(e) {
+        userSelection = plantListItem.id;
+        console.log(userSelection);
+        savePlantData(userSelection)
+       }
     });
   }
   //TO DO
   //clear input and delete old appended items
 
-  function savePlantData(e){
-    let userSelection = e.target.id
-    console.log(userSelection)
+  function savePlantData(userSelection){
+    console.log(userSelection);
+    //compare selection id to id's in plantResults array to grab data I want to save :)
   }
