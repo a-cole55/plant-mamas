@@ -1,6 +1,12 @@
 document.querySelector('#search').addEventListener('click', getPlant);
+document.querySelector('li').addEventListener('click', savePlantData);
 
-function getPlant(){
+let plantResults = [];
+let userSelection = '';
+//TO DO:
+//Set up Error Handling for Keywords not found in database
+
+function getPlant(plantResults){
     let userInput = document.getElementById('searchPlant').value;
     //checks if user input has a space//
     if (userInput.includes(' ')){
@@ -12,8 +18,8 @@ function getPlant(){
     fetch(`https://perenual.com/api/species-list?page=1&key=sk-3rgd63fa93f5a5fd2121&q=${search}`)
     .then(res => res.json()) // parse response as JSON
     .then(data => {
-      console.log(data.data);
-      const plantResults = data.data;
+      plantResults = data.data;
+      console.log(plantResults)
     //   let drinkData = data.drinks;
       displayData(plantResults)
     })
@@ -26,20 +32,32 @@ function getPlant(){
   };
 
   function displayData(plantResults){
-    var resultsList = document.getElementById("plantResults");
+    var resultsList = document.getElementById("plant-results");
 
-    for(let i = 0; i < plantResults.length; i++){
+    plantResults.forEach(element => {
        //create new li element
-       var plantListItem = document.createElement("li");
-
-       //add text
-       plantListItem.innerText = plantResults[i].scientific_name;
+       const plantListItem = document.createElement("li");
+       const plantListContainer = document.createElement("div");
+       const plantListName = document.createElement("span");
+       const plantListImage = document.createElement("img");
+       //add text to span and image
+       plantListName.innerText = element.scientific_name + " " + "(" + element.common_name + ")";
+       plantListImage.src = element.default_image.small_url;
 
        //add new list element built in previous steps to unordered list
-       //called numberList
+       plantListItem.appendChild(plantListContainer);
+       plantListContainer.appendChild(plantListName);
+       plantListContainer.appendChild(plantListImage);
        resultsList.appendChild(plantListItem);
 
-
-    }
+       plantListContainer.classList.add("search-results-container");
+       plantListItem.setAttribute("id", element.id);
+    });
   }
+  //TO DO
   //clear input and delete old appended items
+
+  function savePlantData(e){
+    let userSelection = e.target.id
+    console.log(userSelection)
+  }
