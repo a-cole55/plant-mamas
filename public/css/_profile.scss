@@ -17,6 +17,46 @@
 .fixed {
   position: fixed;
 }
+#plant-results{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  margin-top:100px;
+  padding:0;
+  li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    border-bottom:solid 0.5px #a3b18a;
+    :hover{
+      background-color: #a3b18a
+    }
+  }
+  .search-results-container{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    text-align: left;
+    padding:10px 0;
+    cursor: pointer;
+
+    img{
+      width:50px;
+      height:50px;
+    }
+    span{
+      font-size: 16px;
+      font-weight: bold;
+      text-align: left;
+    }
+  }
+}
 @media screen and (max-width: 930px) {
   .add-plant {
     background-color: white;

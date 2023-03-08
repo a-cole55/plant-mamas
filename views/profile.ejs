@@ -22,23 +22,13 @@ let month = todaysDate.getMonth() + 1 %>
   aria-labelledby="exampleModalLabel"
   aria-hidden="true"
 >
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div
-        class="modal-header"
-        style="
-          background-image: url(../imgs/pexels-sohail-nachiti-807598.jpg);
-          background-size: cover;
-          height: 160px;
-        "
-      ></div>
-      <div class="modal-body"
-        style= "min-height:800px">
-        <div class="plant-name">
-          <h3>Results</h3>
-          <ul id="plantResults">
-          </ul>
-        </div>
+  <div class="modal-dialog modal-dialog-scrollable" >
+    <div class="modal-content" style="height:600px">
+      <div class="modal-header">
+        <h3 style="color:black">Results</h3>
+      </div>
+      <div class="modal-body" style="padding:0">
+        <ul id="plant-results"></ul>
       </div>
       <div class="modal-footer" style="background-color: #a3b18a">
         <button
