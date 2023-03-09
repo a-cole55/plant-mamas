@@ -31,38 +31,43 @@ function getPlant(plantResults){
     });
   };
 
-  function displayData(plantResults){
-    var resultsList = document.getElementById("plant-results");
+function displayData(plantResults){
+  var resultsList = document.getElementById("plant-results");
 
-    plantResults.forEach(element => {
-       //create new li element
-       const plantListItem = document.createElement("li");
-       const plantListContainer = document.createElement("div");
-       const plantListName = document.createElement("span");
-       const plantListImage = document.createElement("img");
-       //add text to span and image
-       plantListName.innerText = element.scientific_name + " " + "(" + element.common_name + ")";
-       plantListImage.src = element.default_image.small_url;
+  plantResults.forEach(element => {
+    //create new li element
+    const plantListItem = document.createElement("li");
+    const plantListContainer = document.createElement("div");
+    const plantListName = document.createElement("span");
+    const plantListImage = document.createElement("img");
 
-       //add new list element built in previous steps to unordered list
-       plantListItem.appendChild(plantListContainer);
-       plantListContainer.appendChild(plantListName);
-       plantListContainer.appendChild(plantListImage);
-       resultsList.appendChild(plantListItem);
+    //add text to span and image source
+    plantListName.innerText = element.scientific_name + " " + "(" + element.common_name + ")";
+    plantListImage.src = element.default_image.thumbnail;
 
-       plantListContainer.classList.add("search-results-container");
-       plantListItem.setAttribute("id", element.id);
-       plantListItem.onclick = function(e) {
-        userSelection = plantListItem.id;
-        console.log(userSelection);
-        savePlantData(userSelection)
-       }
-    });
+    //add new list element built in previous steps to unordered list
+    plantListItem.appendChild(plantListContainer);
+    plantListContainer.appendChild(plantListName);
+    plantListContainer.appendChild(plantListImage);
+    resultsList.appendChild(plantListItem);
+
+    plantListContainer.classList.add("search-results-container");
+    plantListItem.setAttribute("id", element.id);
+
+    plantListItem.onclick = function(e) {
+    userSelection = plantListItem.id;
+    console.log(userSelection);
+    savePlantData(userSelection, plantResults);
+    };
+  });
   }
   //TO DO
   //clear input and delete old appended items
 
-  function savePlantData(userSelection){
-    console.log(userSelection);
+  function savePlantData(userSelection, plantResults){
     //compare selection id to id's in plantResults array to grab data I want to save :)
+    let selection = plantResults.find(ele => ele.id === Number(userSelection));
+    console.log(selection);
+
+    //add the following data to inputs: official plant name, sunlight, watering, image url, cycle?... perrinual
   }

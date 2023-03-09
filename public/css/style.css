@@ -9351,7 +9351,7 @@ textarea.form-control-lg {
     align-items: center;
     justify-content: space-between;
     text-align: left;
-    padding: 10px 0;
+    padding: 10px 10px 10px 0;
     cursor: pointer; }
     #plant-results .search-results-container img {
       width: 50px;
