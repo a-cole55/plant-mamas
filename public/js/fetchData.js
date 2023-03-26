@@ -68,6 +68,32 @@ function displayData(plantResults){
     //compare selection id to id's in plantResults array to grab data I want to save :)
     let selection = plantResults.find(ele => ele.id === Number(userSelection));
     console.log(selection);
+    document.getElementById('name').value = selection.scientific_name;
+    let wateringFrequency = selection.watering;
+    calculateWateringFrequency(wateringFrequency);
+    let sunlightSelection = selection.sunlight;
+    sunlight(sunlightSelection);
 
     //add the following data to inputs: official plant name, sunlight, watering, image url, cycle?... perrinual
+  }
+
+  function sunlight(sunlightSelection){
+    if(sunlightSelection.length == 0){
+      return ""
+    }else{
+      document.getElementById('lightConditions').value = sunlightSelection.map(item => {
+        return item});
+    }
+  }
+
+  function calculateWateringFrequency(wateringFrequency){
+    if(wateringFrequency == "Average") {
+      document.getElementById('water').value = "Biweekly"
+    }else if(wateringFrequency == "Frequent"){
+      document.getElementById('water').value = "Weekly"
+    }else if(wateringFrequency == "Minimal"){
+      document.getElementById('water').value = "Monthly"
+    }else{
+      document.getElementById('water').value = "Daily"
+    }
   }
