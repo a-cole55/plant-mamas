@@ -1,3 +1,20 @@
+Plant Mamas- Plant Tracking App
+
+This is a full-stack web application that allows users to track important information about their plant babies such as the date purchased, last date watered, fertilized, ideal temperatures, etc. As someone that owns 10+ plants (and counting) it was becoming difficult to keep track of this information and I thought it would be helpful to have an app that displays this information in one place. Link to project: https://plant-mamas.cyclic.app/feed
+
+![Screenshot_20230102_013316](https://user-images.githubusercontent.com/94746691/221637880-2624a8ae-25ef-4742-8144-74ca978a59a7.png)
+
+
+How It's Made: Tech used: EJS, NodeJS, Express, and Bootstrap (for the modal)
+
+Optimizations: I would like to connect this app to a plant API (currently exploring: https://perenual.com/docs/api) so that the user doesn't have to manually enter information about their plant such as amount of sunlight needed, watering frequency, and official plant name. The goal is for the user to select the official plant name and this information will auto-populate. Last goal is to make plant information editable after it has been added to the database.
+
+Challenges Faced:
+
+Lessons Learned: 
+
+
+
 # Install
 
 `npm install`
